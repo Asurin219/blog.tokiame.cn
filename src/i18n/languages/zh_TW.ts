@@ -20,6 +20,7 @@ export const zh_TW: Translation = {
 	[Key.recentPosts]: "最新文章",
 	[Key.postList]: "文章列表",
 	[Key.tableOfContents]: "目錄",
+	[Key.tocEmpty]: "目前頁面沒有目錄",
 	[Key.music]: "音樂",
 	[Key.musicNoPlaying]: "暫未播放",
 	[Key.musicLyrics]: "歌詞",
@@ -213,6 +214,10 @@ export const zh_TW: Translation = {
 	[Key.bannerSettings]: "橫幅設置",
 	[Key.bannerTitle]: "首頁橫幅標題",
 	[Key.wavesAnimation]: "水波紋動畫",
+	[Key.overlaySettings]: "透明設定",
+	[Key.overlayOpacity]: "桌布透明度",
+	[Key.overlayBlur]: "背景模糊度",
+	[Key.overlayCardOpacity]: "卡片透明度",
 
 	// 文章佈局
 	[Key.postListLayout]: "文章佈局",

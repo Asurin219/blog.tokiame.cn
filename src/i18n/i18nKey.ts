@@ -16,6 +16,7 @@ enum I18nKey {
 	recentPosts = "recentPosts",
 	postList = "postList",
 	tableOfContents = "tableOfContents",
+	tocEmpty = "tocEmpty",
 	music = "music",
 
 	// 公告栏
@@ -209,6 +210,10 @@ enum I18nKey {
 	bannerSettings = "bannerSettings",
 	bannerTitle = "bannerTitle",
 	wavesAnimation = "wavesAnimation",
+	overlaySettings = "overlaySettings",
+	overlayOpacity = "overlayOpacity",
+	overlayBlur = "overlayBlur",
+	overlayCardOpacity = "overlayCardOpacity",
 
 	// 文章布局
 	postListLayout = "postListLayout",

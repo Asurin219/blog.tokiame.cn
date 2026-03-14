@@ -20,6 +20,7 @@ export const zh_CN: Translation = {
 	[Key.recentPosts]: "最新文章",
 	[Key.postList]: "文章列表",
 	[Key.tableOfContents]: "目录",
+	[Key.tocEmpty]: "当前页面没有目录",
 	[Key.music]: "音乐",
 	[Key.musicNoPlaying]: "暂未播放",
 	[Key.musicLyrics]: "歌词",
@@ -211,6 +212,10 @@ export const zh_CN: Translation = {
 	[Key.bannerSettings]: "横幅设置",
 	[Key.bannerTitle]: "首页横幅标题",
 	[Key.wavesAnimation]: "水波纹动画",
+	[Key.overlaySettings]: "透明设置",
+	[Key.overlayOpacity]: "壁纸透明度",
+	[Key.overlayBlur]: "背景模糊度",
+	[Key.overlayCardOpacity]: "卡片透明度",
 
 	// 文章布局
 	[Key.postListLayout]: "文章布局",

@@ -20,6 +20,7 @@ export const en: Translation = {
 	[Key.recentPosts]: "Recent Posts",
 	[Key.postList]: "Post List",
 	[Key.tableOfContents]: "Table of Contents",
+	[Key.tocEmpty]: "No table of contents on this page",
 	[Key.music]: "Music",
 	[Key.musicNoPlaying]: "No playing",
 	[Key.musicLyrics]: "Lyrics",
@@ -219,6 +220,10 @@ export const en: Translation = {
 	[Key.bannerSettings]: "Banner Settings",
 	[Key.bannerTitle]: "Home Banner Title",
 	[Key.wavesAnimation]: "Waves Animation",
+	[Key.overlaySettings]: "Transparency Settings",
+	[Key.overlayOpacity]: "Wallpaper Opacity",
+	[Key.overlayBlur]: "Background Blur",
+	[Key.overlayCardOpacity]: "Card Opacity",
 
 	// Post List Layout
 	[Key.postListLayout]: "Post List Layout",

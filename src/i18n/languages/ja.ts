@@ -20,6 +20,7 @@ export const ja: Translation = {
 	[Key.recentPosts]: "最近の投稿",
 	[Key.postList]: "投稿リスト",
 	[Key.tableOfContents]: "目次",
+	[Key.tocEmpty]: "このページには目次がありません",
 	[Key.music]: "音楽",
 	[Key.musicNoPlaying]: "再生中なし",
 	[Key.musicLyrics]: "歌詞",
@@ -218,6 +219,10 @@ export const ja: Translation = {
 	[Key.bannerSettings]: "バナー設定",
 	[Key.bannerTitle]: "ホームバナータイトル",
 	[Key.wavesAnimation]: "波アニメーション",
+	[Key.overlaySettings]: "透明設定",
+	[Key.overlayOpacity]: "壁紙の透明度",
+	[Key.overlayBlur]: "背景ぼかし",
+	[Key.overlayCardOpacity]: "カード透明度",
 
 	// 投稿リストレイアウト
 	[Key.postListLayout]: "投稿リストレイアウト",

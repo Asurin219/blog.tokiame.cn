@@ -20,6 +20,7 @@ export const ru: Translation = {
 	[Key.recentPosts]: "Последние посты",
 	[Key.postList]: "Список постов",
 	[Key.tableOfContents]: "Содержание",
+	[Key.tocEmpty]: "На этой странице нет оглавления",
 	[Key.music]: "Музыка",
 	[Key.musicNoPlaying]: "Ничего не воспроизводится",
 	[Key.musicLyrics]: "Текст песни",
@@ -220,6 +221,10 @@ export const ru: Translation = {
 	[Key.bannerSettings]: "Настройки баннера",
 	[Key.bannerTitle]: "Заголовок главного баннера",
 	[Key.wavesAnimation]: "Анимация волн",
+	[Key.overlaySettings]: "Настройки прозрачности",
+	[Key.overlayOpacity]: "Прозрачность обоев",
+	[Key.overlayBlur]: "Размытие фона",
+	[Key.overlayCardOpacity]: "Прозрачность карточек",
 
 	// Макет списка сообщений
 	[Key.postListLayout]: "Макет списка сообщений",
