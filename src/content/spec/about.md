@@ -1,38 +1,40 @@
-# 关于我 / About Me
+# ⭐ 关于我 / About Me
 
-你好！我是 **夏叶** ，一个在数字世界中默默无闻的一片叶子。
+Asurin，请多指教。
 
-## 🛠️ 关于本站
+不怎么擅长交际，不喜欢与自己毫无联系的喧闹，更多的时候喜欢安静地折腾自己喜欢的东西。
 
-这个网站使用 **Astro** 框架构建，采用了 [Firefly](https://github.com/CuteLeaf/Firefly) 模板，Firefly 是基于 [Fuwari](https://github.com/saicaca/fuwari) 的二次开发。
+* 曾因一次严重的精神刺激成为二游玩家（确信）
 
-**Firefly** 是一款基于 Astro 框架和 Fuwari 模板开发的清新美观且现代化个人博客主题模板，专为技术爱好者和内容创作者设计。该主题融合了现代 Web 技术栈，提供了丰富的功能模块和高度可定制的界面，让您能够轻松打造出专业且美观的个人博客网站。
+* 曾经是垃圾佬，现在是中度HomeLab玩家，即将集齐中年人三件套。
 
+* 前学院网管、系统集成工程师，现华为认证云计算&存储工程师。目前就职于一家华为ASP公司，负责原厂产品交付工作。
 
-**🖥️在线预览： [Firefly - Demo site](https://firefly.cuteleaf.cn/)**
+## 🛠️ 关于本站 / About Site
+### 发展历程
 
-**🏠我的博客： [https://blog.cuteleaf.cn](https://blog.cuteleaf.cn/)**
+* 前身为2019年为大学工作室而创建的博客 **ITeamTechGroup**，采用WordPress构建，作为技术分享与交流的平台。
 
-**📝Firefly使用文档： [https://docs-firefly.cuteleaf.cn](https://docs-firefly.cuteleaf.cn/)**
+* 2020年全面转向Hexo框架后，开始作为个人blog独立发展。
 
-**⭐Firefly开源地址：[https://github.com/CuteLeaf/Firefly](https://github.com/CuteLeaf/Firefly)** 
+* 2026年伊始，受 [弹霄博科](https://www.txisfine.cn/archives/3f5a9065.html) 启发，采用Codex顺利将博客从Hexo迁移到Astro
 
-**⭐Fuwari开源地址：[https://github.com/saicaca/fuwari](https://github.com/saicaca/fuwari)**
+目前，这个blog主要用于记录一些工作与生活中遇到的问题，以及相应的解决思路（指不定期鸽）。早期行文风格偏教程化+牢骚化，至今仍不知道当时是怎么写出来的（耻ずかし！）
 
-::github{repo="CuteLeaf/Firefly"}
+### 内容方向
 
-::github{repo="saicaca/fuwari"}
+**2019-2022：** 服务器、Linux、云计算
 
+**2022-今：** 编程基础、DevOps
 
-## 📫 联系方式
+## 📫 联系方式 / Contact Info
 
-如果你想和我交流技术问题，分享有趣的想法，或者只是想打个招呼，欢迎通过以下方式联系我：
+如果你对文章的内容感兴趣，希望与我共同探讨一些技术问题，或只是想和我打个招呼，欢迎通过以下方式找到我：
 
-- 💻 **GitHub**: [CuteLeaf](https://github.com/CuteLeaf)
-- ✉️ **Email**: [xiaye@msn.com](mailto:xiaye@msn.com)
-- 🐧 **QQ交流群：[1087127207](https://qm.qq.com/q/ZGsFa8qX2G)**
+- 💻 **GitHub：** [Asurin219](https://github.com/Asurin219)
+- ✉️ **Email：** [824907403@qq.com](mailto:824907403@qq.com)
+- 🐧 **QQ：** [824907403](https://qm.qq.com/q/zvur6b2D5e)
 
 ---
 
-*感谢你的来访！希望在这里能找到对你有用的内容！*
-
+*让我们集思广益。*

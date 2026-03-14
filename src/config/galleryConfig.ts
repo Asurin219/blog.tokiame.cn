@@ -15,11 +15,19 @@ export const galleryConfig: GalleryConfig = {
 		// 每添加一个数组项就相当于添加了一个相册，记得在 public/gallery/ 目录下创建对应的子目录并放入图片
 		{
 			id: "firefly-2026",
-			name: "可爱流萤",
+			name: "流萤",
 			description: "飞萤之火自无梦的长夜亮起，绽放在终竟的明天。",
-			location: "崩坏：星穹铁道",
+			location: "匹诺康尼",
 			date: "2026-01-01",
 			tags: ["崩坏星穹铁道", "流萤"],
+		},
+		{
+			id: "EVANGELION",
+			name: "新世纪福音战士",
+			description: "",
+			location: "第三新东京市",
+			date: "2026-03-15",
+			tags: ["EVA", "明日香","碇真嗣","绫波丽","渚薰"],
 		},
 	],
 
