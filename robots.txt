@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /_astro/
 
-Sitemap: https://blog.tokiame.cn/sitemap-index.xml
+Sitemap: https://firefly.cuteleaf.cn/sitemap-index.xml
