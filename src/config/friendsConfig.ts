@@ -102,7 +102,7 @@ export const friendsConfig: FriendLink[] = [
 		title: "小冰博客",
 		imgurl: "https://zfe.space/images/headimage.png",
 		desc: "做个有梦想的人！",
-		siteurl: "https://zfe.one",
+		siteurl: "https://zfe.space",
 		tags: ["通往异世界"],
 		weight: 2,
 		enabled: true,
