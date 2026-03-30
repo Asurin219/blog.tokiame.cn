@@ -2,7 +2,7 @@
 title: '华三服务器·UIS RAID2000 M2（PM8060）阵列卡基本配置'
 published: 2020-07-02
 description: ''
-image: 'https://buff.tokiame.cn/hexo-images/2020-07-04-15-13-44.jpg'
+image: 'https://cdn.tokiame.cn/2020-07-04-15-13-44.jpg'
 tags:
   - 'RAID'
   - '磁盘'
@@ -27,24 +27,24 @@ author: ''
 4. 一台电脑，用于远程操作
 ## 正文
 使用电脑登录到服务器的BMC，点击远程控制台，下载控制台程序并运行（需要安装JRE）：
-![2020-07-01-18-10-03](https://buff.tokiame.cn/hexo-images/2020-07-01-18-10-03.png)
+![2020-07-01-18-10-03](https://cdn.tokiame.cn/2020-07-01-18-10-03.png)
 点击控制台左上角的电源，点击开机。如果服务器处于开机状态，则点击重启。等待系统自检通过后（大概需要一分钟），按屏幕提示，按下Esc键或Del键进入BIOS。如下图操作：
 
 
-![2020-07-01-18-33-03](https://buff.tokiame.cn/hexo-images/2020-07-01-18-33-03.png)
+![2020-07-01-18-33-03](https://cdn.tokiame.cn/2020-07-01-18-33-03.png)
 
 选中高级→PMC maxView Storage Manager，一路回车，进入RAID配置界面：
-![2020-07-01-18-13-10](https://buff.tokiame.cn/hexo-images/2020-07-01-18-13-10.png)
+![2020-07-01-18-13-10](https://cdn.tokiame.cn/2020-07-01-18-13-10.png)
 
-![2020-07-01-18-16-04](https://buff.tokiame.cn/hexo-images/2020-07-01-18-16-04.png)
+![2020-07-01-18-16-04](https://cdn.tokiame.cn/2020-07-01-18-16-04.png)
 
 选中Logical Device Configuration→Create Array，创建一个新的逻辑磁盘组。这里以创建一个RAID1阵列为例：
-![2020-07-01-18-19-18](https://buff.tokiame.cn/hexo-images/2020-07-01-18-19-18.png)
+![2020-07-01-18-19-18](https://cdn.tokiame.cn/2020-07-01-18-19-18.png)
 
-![2020-07-01-18-19-43](https://buff.tokiame.cn/hexo-images/2020-07-01-18-19-43.png)
+![2020-07-01-18-19-43](https://cdn.tokiame.cn/2020-07-01-18-19-43.png)
 
-![2020-07-01-18-21-13](https://buff.tokiame.cn/hexo-images/2020-07-01-18-21-13.png)
+![2020-07-01-18-21-13](https://cdn.tokiame.cn/2020-07-01-18-21-13.png)
 ps：由于是实验，这里使用Quick Init（快速部署）即可。
 
 查看配置结果：
-![2020-07-01-18-46-38](https://buff.tokiame.cn/hexo-images/2020-07-01-18-46-38.png)
+![2020-07-01-18-46-38](https://cdn.tokiame.cn/2020-07-01-18-46-38.png)

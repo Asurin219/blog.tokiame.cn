@@ -2,7 +2,7 @@
 title: '使用CentOS 8 Cockpit+KVM搭建FusionCompute实验环境'
 published: 2020-05-13
 description: ''
-image: 'https://buff.tokiame.cn/hexo-images/2020-05-13-14-40-35.jpg'
+image: 'https://cdn.tokiame.cn/2020-05-13-14-40-35.jpg'
 tags:
   - '虚拟化'
   - '云计算'
@@ -49,10 +49,10 @@ FusionCompute_6.5.1_VRM.iso|VRM节点安装镜像
 
 ## 网络规划
 * 如图（虚拟化层层嵌套，问你怕未！）
-![2020-05-13-17-14-53](https://buff.tokiame.cn/hexo-images/2020-05-13-17-14-53.png)
+![2020-05-13-17-14-53](https://cdn.tokiame.cn/2020-05-13-17-14-53.png)
 
 * 简化以后其实拓扑就长这样而已：
-![2020-05-13-17-28-26](https://buff.tokiame.cn/hexo-images/2020-05-13-17-28-26.png)
+![2020-05-13-17-28-26](https://cdn.tokiame.cn/2020-05-13-17-28-26.png)
 
 **思路:** 笔记本用VMware Workstation开一台CentOS 8虚拟机，然后在CentOS 8内安装KVM，在KVM上部署CNA节点。然后，台式机用VMware Workstation开一台虚拟机，专门部署VRM节点。为了保证同网段互通，虚拟机全部采用**桥接模式**。
 
@@ -63,21 +63,21 @@ FusionCompute_6.5.1_VRM.iso|VRM节点安装镜像
 {% endnote %}
 
 使用VMware Workstation新建一台虚拟机，配置如下：
-![2020-05-14-03-11-04](https://buff.tokiame.cn/hexo-images/2020-05-14-03-11-04.png)
+![2020-05-14-03-11-04](https://cdn.tokiame.cn/2020-05-14-03-11-04.png)
 
 打开虚拟机电源，安装好CentOS 8.1，这个大家应该都会的，不用多说吧！
 {% note warning %}
 **注意！**
 为了减少不必要的性能损耗，不需要装GUI！不需要装GUI！不需要装GUI！
 {% endnote %}
-![2020-05-13-17-35-38](https://buff.tokiame.cn/hexo-images/2020-05-13-17-35-38.jpg)
+![2020-05-13-17-35-38](https://cdn.tokiame.cn/2020-05-13-17-35-38.jpg)
 安装完成后，使用XShell登录到CentOS 8.1，就可以开始进入以下步骤了。
 
 ## 配置虚拟化环境
 {% note warning %}
 **注意！**
 一定要把VMware Workstation虚拟机的嵌套虚拟化功能打开！如下图：
-![2020-05-13-17-58-44](https://buff.tokiame.cn/hexo-images/2020-05-13-17-58-44.png)
+![2020-05-13-17-58-44](https://cdn.tokiame.cn/2020-05-13-17-58-44.png)
 虚拟机开机后，输入以下命令，根据输出的数值检查系统是否支持虚拟化：
 ```
 egrep -c '(vmx|svm)' /proc/cpuinfo
@@ -114,7 +114,7 @@ modprobe -r kvm_intel
 modprobe -a kvm_intel
 ```
 再次检查嵌套虚拟化是否已激活：
-![2020-05-13-18-17-00](https://buff.tokiame.cn/hexo-images/2020-05-13-18-17-00.png)
+![2020-05-13-18-17-00](https://cdn.tokiame.cn/2020-05-13-18-17-00.png)
 
 ## 配置网络
 {% note warning %}
@@ -159,7 +159,7 @@ nmcli c reload ens32
 ```
 
 使用`ip ad`查看网络配置信息：
-![2020-05-13-19-52-22](https://buff.tokiame.cn/hexo-images/2020-05-13-19-52-22.png)
+![2020-05-13-19-52-22](https://cdn.tokiame.cn/2020-05-13-19-52-22.png)
 
 ## 初次使用Cockpit
 {% note info %}
@@ -179,8 +179,8 @@ setenforce 0
 ```
 
 打开浏览器，输入`https://<Linux IP地址>:9090`访问Cockpit，使用系统root账号密码进行登录：
-![2020-05-13-18-39-44](https://buff.tokiame.cn/hexo-images/2020-05-13-18-39-44.png)
-![2020-05-13-18-40-42](https://buff.tokiame.cn/hexo-images/2020-05-13-18-40-42.png)
+![2020-05-13-18-39-44](https://cdn.tokiame.cn/2020-05-13-18-39-44.png)
+![2020-05-13-18-40-42](https://cdn.tokiame.cn/2020-05-13-18-40-42.png)
 
 # 通过Linux Cockpit部署虚拟机
 ## 安装虚拟机组件cockpit-machines
@@ -196,10 +196,10 @@ systemctl restart libvirtd
 
 ## 创建虚拟机
 登录Cockpit，点击左侧栏“虚拟机”，右侧窗口点击“创建虚拟机”：
-![2020-05-13-20-36-08](https://buff.tokiame.cn/hexo-images/2020-05-13-20-36-08.png)
+![2020-05-13-20-36-08](https://cdn.tokiame.cn/2020-05-13-20-36-08.png)
 
 设置虚拟机参数（我已经事先把CNA的安装镜像上传到/opt目录下了）：
-![2020-05-13-22-12-52](https://buff.tokiame.cn/hexo-images/2020-05-13-22-12-52.png)
+![2020-05-13-22-12-52](https://cdn.tokiame.cn/2020-05-13-22-12-52.png)
 
 可以看到虚拟机已经成功创建。
 
@@ -209,14 +209,14 @@ systemctl restart libvirtd
 **提示：**
 vCPU数量不要超过6个！FusionCompute基础版免费授权的CPU数量为6个，超过这个限度就等着过期吧！
 {% endnote %}
-![2020-05-13-20-42-51](https://buff.tokiame.cn/hexo-images/2020-05-13-20-42-51.png)
-![2020-05-14-13-21-35](https://buff.tokiame.cn/hexo-images/2020-05-14-13-21-35.png)
+![2020-05-13-20-42-51](https://cdn.tokiame.cn/2020-05-13-20-42-51.png)
+![2020-05-14-13-21-35](https://cdn.tokiame.cn/2020-05-14-13-21-35.png)
 
 接下来，将VMware Workstation分配给CentOS的256G的虚拟磁盘直通给CNA使用。为什么要用到磁盘直通呢？我们可以看到，部署CNA这台KVM虚拟机经过了2层虚拟化（第一层是VMware Workstation，第二层是QEMU-KVM）。下图表示的是在CentOS内将这块256G磁盘进行格式化，然后在该磁盘上创建一块QCOW2虚拟磁盘供KVM虚拟机使用：
-![2020-05-13-21-42-28](https://buff.tokiame.cn/hexo-images/2020-05-13-21-42-28.png)
+![2020-05-13-21-42-28](https://cdn.tokiame.cn/2020-05-13-21-42-28.png)
 
 这样会带来什么问题呢？虽然KVM虚拟机能够正常使用，但是虚拟磁盘经过多层嵌套后，磁盘性能会大打折扣。解决办法就是让KVM虚拟机不经过CentOS的文件系统，直接对这块256GB的磁盘进行读写，也就是磁盘直通，如图：
-![2020-05-13-21-55-02](https://buff.tokiame.cn/hexo-images/2020-05-13-21-55-02.png)
+![2020-05-13-21-55-02](https://cdn.tokiame.cn/2020-05-13-21-55-02.png)
 
 配置方法也比较简单，只需要在该虚拟机的配置文件进行修改即可。默认情况下，KVM虚拟机的配置文件保存在`/etc/libvirt/qemu/`目录下，文件后缀名为.xml。编辑虚拟机配置文件：
 ```
@@ -235,46 +235,46 @@ vim /etc/libvirt/qemu/CNA.xml
 </disk>
 ```
 编辑完成后保存并退出，然后使用`systemctl restart libvirtd`重新启动libvirt服务。回到Cockpit的虚拟机管理界面，我们会发现多了一块磁盘，也就是上述配置的直通磁盘：
-![2020-05-13-22-29-14](https://buff.tokiame.cn/hexo-images/2020-05-13-22-29-14.png)
+![2020-05-13-22-29-14](https://cdn.tokiame.cn/2020-05-13-22-29-14.png)
 
 ## 启动虚拟机
 在虚拟机页面处，点击Install开始部署虚拟机，稍等片刻后部署完成，虚拟机会自动打开电源：
-![2020-05-13-22-51-20](https://buff.tokiame.cn/hexo-images/2020-05-13-22-51-20.png)
+![2020-05-13-22-51-20](https://cdn.tokiame.cn/2020-05-13-22-51-20.png)
 看到这个界面，是不是觉得似曾相识？接下来就按照平常安装CNA节点的步骤进行操作就OK了！
 
 # 开始部署FusionCompute
 ## 安装CNA节点
 设置CNA的网络、主机名、root密码等参数：
-![2020-05-13-22-56-37](https://buff.tokiame.cn/hexo-images/2020-05-13-22-56-37.png)
-![2020-05-13-22-57-00](https://buff.tokiame.cn/hexo-images/2020-05-13-22-57-00.png)
-![2020-05-13-22-57-37](https://buff.tokiame.cn/hexo-images/2020-05-13-22-57-37.png)
-![2020-05-13-22-58-10](https://buff.tokiame.cn/hexo-images/2020-05-13-22-58-10.png)
-![2020-05-13-22-58-48](https://buff.tokiame.cn/hexo-images/2020-05-13-22-58-48.png)
+![2020-05-13-22-56-37](https://cdn.tokiame.cn/2020-05-13-22-56-37.png)
+![2020-05-13-22-57-00](https://cdn.tokiame.cn/2020-05-13-22-57-00.png)
+![2020-05-13-22-57-37](https://cdn.tokiame.cn/2020-05-13-22-57-37.png)
+![2020-05-13-22-58-10](https://cdn.tokiame.cn/2020-05-13-22-58-10.png)
+![2020-05-13-22-58-48](https://cdn.tokiame.cn/2020-05-13-22-58-48.png)
 
 ## VRM节点配置（踩坑）
 回顾：[利用闲置台式机搭建FusionCompute实验环境](https://www.unlinus.cn/2020/05/10/%E5%88%A9%E7%94%A8%E9%97%B2%E7%BD%AE%E4%B8%BB%E6%9C%BA%E6%90%AD%E5%BB%BAFusionCompute%E5%AE%9E%E9%AA%8C%E7%8E%AF%E5%A2%83/)
 
 ### 无法添加主机
 在VRM部署完成以后，创建了集群，但是无法添加主机，出现以下报错：
-![2020-05-13-23-43-30](https://buff.tokiame.cn/hexo-images/2020-05-13-23-43-30.png)
+![2020-05-13-23-43-30](https://cdn.tokiame.cn/2020-05-13-23-43-30.png)
 
 解决方法是将CNA节点关机，将虚拟网卡型号改为e1000后重启CNA节点，问题解决！
-![2020-05-13-23-57-02](https://buff.tokiame.cn/hexo-images/2020-05-13-23-57-02.png)
+![2020-05-13-23-57-02](https://cdn.tokiame.cn/2020-05-13-23-57-02.png)
 **PS：千万千万不要手贱去改网卡型号！**
 
 ### 虚拟机打开电源失败
 当主机添加完成后，成功创建一台虚拟机，但虚拟机打开电源失败，日志出现以下报错：
-![2020-05-14-02-57-07](https://buff.tokiame.cn/hexo-images/2020-05-14-02-57-07.png)
+![2020-05-14-02-57-07](https://cdn.tokiame.cn/2020-05-14-02-57-07.png)
 
 多次修改vCPU核心数、线程数、重新安装CNA，仍然无效。最终解决办法是：关闭CNA节点，修改虚拟机的xml配置文件，修改CPU工作模式，将`<cpu mode='host-model' check='partical'>`修改为`<cpu mode='host-passthrough' check='none'>`，保存退出，重新启动CNA节点后，问题解决：
-![2020-05-14-03-33-24](https://buff.tokiame.cn/hexo-images/2020-05-14-03-33-24.png)
+![2020-05-14-03-33-24](https://cdn.tokiame.cn/2020-05-14-03-33-24.png)
 
 后期经过查阅资料得知，**使用host-model模式，Libvirt会根据物理CPU的型号，从规定的CPU中选择一种最接近的CPU型号，而使用host-passthrough模式直接看到的就是物理CPU的型号**。 参考自[梦轻尘的博客](https://www.cnblogs.com/uglyliu/p/6066569.html)。
 
 ## 最终效果
 费尽周折，最后总算把实验环境搭起来了。
-![2020-05-14-03-41-15](https://buff.tokiame.cn/hexo-images/2020-05-14-03-41-15.png)
-![2020-05-14-03-40-47](https://buff.tokiame.cn/hexo-images/2020-05-14-03-40-47.png)
+![2020-05-14-03-41-15](https://cdn.tokiame.cn/2020-05-14-03-41-15.png)
+![2020-05-14-03-40-47](https://cdn.tokiame.cn/2020-05-14-03-40-47.png)
 
 # 总结
 云计算是离不开Linux的。学习云计算，拥有良好的Linux基础十分重要。

@@ -2,7 +2,7 @@
 title: 'Hexo折腾手记'
 published: 2020-04-25
 description: ''
-image: 'https://buff.tokiame.cn/hexo-images/2020-04-26-21-29-21.png'
+image: 'https://cdn.tokiame.cn/2020-04-26-21-29-21.png'
 tags:
   - 'Hexo'
   - '博客'
@@ -27,13 +27,13 @@ Hexo是基于node.js构建的一套静态博客平台，安装部署过程都比
 5. 准备好编辑器（sublime，atom，vscode，typora等等）。
 ## 安装git
 下载地址：[http://npm.taobao.org/mirrors/git-for-windows/](http://npm.taobao.org/mirrors/git-for-windows/ "http://npm.taobao.org/mirrors/git-for-windows/")。我下的是最新版：
-![20200425192102](https://buff.tokiame.cn/hexo-images/npm.png)
+![20200425192102](https://cdn.tokiame.cn/npm.png)
 
 下载完成后，运行安装（保持默认配置,一直Next即可）。
 
 ## 安装node.js
 上[node.js官网](https://nodejs.org/en/)下载适合自己系统版本的node.js运行环境安装包（建议用IDM、迅雷之类的工具来下载，这样比较快）。下载完成后，运行安装即可（没什么需要的话，保留默认配置安装就可以了）：
-![2020-04-26-20-34-19](https://buff.tokiame.cn/hexo-images/2020-04-26-20-34-19.png)
+![2020-04-26-20-34-19](https://cdn.tokiame.cn/2020-04-26-20-34-19.png)
 
 安装完成后,执行以下命令：
 ```shell
@@ -58,7 +58,7 @@ hexo s         /*开始跑Hexo*/
 ```
 
 打开浏览器，输入`IP地址:4000`(本地的话是 `localhost:4000` 或 `127.0.0.1:4000`),就可以看到效果了，是不是很简单！
-![20200425192452](https://buff.tokiame.cn/hexo-images/example.png)
+![20200425192452](https://cdn.tokiame.cn/example.png)
 
 # 后记
 

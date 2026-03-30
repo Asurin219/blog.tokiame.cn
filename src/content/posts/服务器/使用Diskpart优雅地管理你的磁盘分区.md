@@ -2,7 +2,7 @@
 title: '使用Diskpart优雅地管理你的磁盘分区'
 published: 2021-05-28
 description: ''
-image: 'https://buff.tokiame.cn/hexo-images/2021-05-27-17-43-41.png'
+image: 'https://cdn.tokiame.cn/2021-05-27-17-43-41.png'
 tags:
   - '服务器'
   - 'Windows'
@@ -27,22 +27,22 @@ author: ''
 
 ## 安装伊始
 照常创建虚拟机，挂载Windows安装镜像，一路来到Windows安装界面：
-![2021-05-27-18-16-22](https://buff.tokiame.cn/hexo-images/2021-05-27-18-16-22.png)
+![2021-05-27-18-16-22](https://cdn.tokiame.cn/2021-05-27-18-16-22.png)
 
 点击下一步→修复计算机：
-![2021-05-27-19-00-45](https://buff.tokiame.cn/hexo-images/2021-05-27-19-00-45.png)
+![2021-05-27-19-00-45](https://cdn.tokiame.cn/2021-05-27-19-00-45.png)
 
 依次点击疑难解答→命令提示符，进入命令行界面。没错，就是喜闻乐见的cmd：
-![2021-05-27-19-01-49](https://buff.tokiame.cn/hexo-images/2021-05-27-19-01-49.png)
-![2021-05-27-19-01-59](https://buff.tokiame.cn/hexo-images/2021-05-27-19-01-59.png)
+![2021-05-27-19-01-49](https://cdn.tokiame.cn/2021-05-27-19-01-49.png)
+![2021-05-27-19-01-59](https://cdn.tokiame.cn/2021-05-27-19-01-59.png)
 
 输入diskpart运行磁盘管理工具。
-![2021-05-27-19-04-10](https://buff.tokiame.cn/hexo-images/2021-05-27-19-04-10.png)
+![2021-05-27-19-04-10](https://cdn.tokiame.cn/2021-05-27-19-04-10.png)
 
 diskpart提供了比较丰富的磁盘管理功能，可以实现磁盘的初始化、分区新建、格式化、删除等功能。如果不熟悉diskpart，可以输入``help``显示帮助信息。
 
 如图，使用``list disk``列出所有磁盘，然后根据返回的信息，输入``select disk 0``选中需要操作的磁盘:
-![2021-05-27-19-08-31](https://buff.tokiame.cn/hexo-images/2021-05-27-19-08-31.png)
+![2021-05-27-19-08-31](https://cdn.tokiame.cn/2021-05-27-19-08-31.png)
 
 由于采用UEFI引导方式，故需要将磁盘初始化为GPT格式
 ```
@@ -63,13 +63,13 @@ DiskPart 成功地创建了指定分区。
 ```
 
 输入``list partition``，列出所有分区，确保无误：
-![2021-05-27-19-18-41](https://buff.tokiame.cn/hexo-images/2021-05-27-19-18-41.png)
+![2021-05-27-19-18-41](https://cdn.tokiame.cn/2021-05-27-19-18-41.png)
 
 输入``exit``退出Diskpart，然后输入``setup.exe``，重新进入安装程序。
 
 ## 后续步骤
 像往常一样正常安装Windows即可。
-![2021-05-27-19-22-18](https://buff.tokiame.cn/hexo-images/2021-05-27-19-22-18.png)
+![2021-05-27-19-22-18](https://cdn.tokiame.cn/2021-05-27-19-22-18.png)
 
 # 参考文章
 https://baike.baidu.com/item/diskpart/2340530?fr=aladdin#6

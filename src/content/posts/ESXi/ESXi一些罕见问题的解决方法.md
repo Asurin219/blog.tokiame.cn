@@ -2,7 +2,7 @@
 title: 'ESXi6.7一些罕见问题的解决方法'
 published: 2020-04-28
 description: ''
-image: 'https://buff.tokiame.cn/hexo-images/2020-04-29-23-59-15.png'
+image: 'https://cdn.tokiame.cn/2020-04-29-23-59-15.png'
 tags:
   - '服务器'
   - 'vSphere'
@@ -28,23 +28,23 @@ author: ''
 
 第一反应告诉我，可能是VCSA的核心服务没能启动。按照网上大神的说法，需要SSH登录到VCSA，用命令行来启动核心服务。但是问题来了，这VCSA默认没打开SSH服务啊，还能怎么搞？
 其实VCSA还有个设备管理功能（用于进行VCSA底层组件管理），可以通过浏览器访问`https://<VCSA IP>:5480：`进入：
-![2020-04-29-23-20-11](https://buff.tokiame.cn/hexo-images/2020-04-29-23-20-11.png)
+![2020-04-29-23-20-11](https://cdn.tokiame.cn/2020-04-29-23-20-11.png)
 
-![2020-04-29-23-23-46](https://buff.tokiame.cn/hexo-images/2020-04-29-23-23-46.png)
+![2020-04-29-23-23-46](https://cdn.tokiame.cn/2020-04-29-23-23-46.png)
 
 果不其然，VCSA的好几个核心服务都没有启动。按照下图说明来启动相关服务，然后看看VCSA是不是能访问了？：
-![2020-04-29-23-30-14](https://buff.tokiame.cn/hexo-images/2020-04-29-23-30-14.png)
+![2020-04-29-23-30-14](https://cdn.tokiame.cn/2020-04-29-23-30-14.png)
 
-![2020-04-29-23-32-31](https://buff.tokiame.cn/hexo-images/2020-04-29-23-32-31.png)
+![2020-04-29-23-32-31](https://cdn.tokiame.cn/2020-04-29-23-32-31.png)
 
 # 第二个问题：无法操作虚拟机
 ## 异常表现
 
 一切尽在不言中：
-![2020-04-29-23-35-50](https://buff.tokiame.cn/hexo-images/2020-04-29-23-35-50.png)
+![2020-04-29-23-35-50](https://cdn.tokiame.cn/2020-04-29-23-35-50.png)
 
 还有无脑弹出的消息：
-![2020-04-29-23-37-05](https://buff.tokiame.cn/hexo-images/2020-04-29-23-37-05.png)
+![2020-04-29-23-37-05](https://cdn.tokiame.cn/2020-04-29-23-37-05.png)
 
 ## 解决方法
 同第一个问题一样，也是因VCSA服务异常造成的。把相关服务启动或者重新启动一遍就可以了。

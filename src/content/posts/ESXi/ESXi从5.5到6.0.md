@@ -2,7 +2,7 @@
 title: 'ESXi升级方法 - 从5.5到6.0'
 published: 2020-04-27
 description: ''
-image: 'https://buff.tokiame.cn/hexo-images/2020-04-26-20-17-56.png'
+image: 'https://cdn.tokiame.cn/2020-04-26-20-17-56.png'
 tags:
   - '虚拟化'
   - '服务器'
@@ -33,43 +33,43 @@ author: ''
 ## 通过vSphere Client进行操作
 
 使用vSphere Client登录到ESXi节点，将节点切换到维护模式：
-![2020-04-26-18-00-29](https://buff.tokiame.cn/hexo-images/2020-04-26-18-00-29.png)
+![2020-04-26-18-00-29](https://cdn.tokiame.cn/2020-04-26-18-00-29.png)
 
-![2020-04-26-18-04-01](https://buff.tokiame.cn/hexo-images/2020-04-26-18-04-01.png)
+![2020-04-26-18-04-01](https://cdn.tokiame.cn/2020-04-26-18-04-01.png)
 
 将ESXi升级包上传到数据存储，并记下数据存储路径，后续升级操作要用到。例如我这里将升级包上传到了本地存储，那么我现在得记下本地存储的路径：
-![2020-04-26-18-20-10](https://buff.tokiame.cn/hexo-images/2020-04-26-18-20-10.png)
+![2020-04-26-18-20-10](https://cdn.tokiame.cn/2020-04-26-18-20-10.png)
 
 ## 通过SSH登录到ESXi节点
 打开该节点的配置→安全配置文件，启动SSH服务：
-![2020-04-26-18-05-41](https://buff.tokiame.cn/hexo-images/2020-04-26-18-05-41.png)
+![2020-04-26-18-05-41](https://cdn.tokiame.cn/2020-04-26-18-05-41.png)
 
-![2020-04-26-18-06-45](https://buff.tokiame.cn/hexo-images/2020-04-26-18-06-45.png)
+![2020-04-26-18-06-45](https://cdn.tokiame.cn/2020-04-26-18-06-45.png)
 
 打开超级终端软件（笔者用的是XShell），使用ESXi的账号密码，用SSH登录到ESXi节点：
-![2020-04-26-18-09-19](https://buff.tokiame.cn/hexo-images/2020-04-26-18-09-19.png)
+![2020-04-26-18-09-19](https://cdn.tokiame.cn/2020-04-26-18-09-19.png)
 
 ## 使用命令对ESXi进行平滑升级
 使用这条命令列出ESXi升级包的版本：
 ```bash
 esxcli software sources profile list -d <ESXi升级包所在的数据存储的路径>
 ```
-![2020-04-26-18-15-43](https://buff.tokiame.cn/hexo-images/2020-04-26-18-15-43.png)
+![2020-04-26-18-15-43](https://cdn.tokiame.cn/2020-04-26-18-15-43.png)
 （注：数据存储路径见本文3.2）
 
 然后使用这条命令，通过升级包进行升级
 ```bash
 esxcli software profile update -d <ESXi升级包所在的数据存储的路径> -p <ESXi升级包版本>
 ```
-![2020-04-26-19-32-24](https://buff.tokiame.cn/hexo-images/2020-04-26-19-32-24.png)
+![2020-04-26-19-32-24](https://cdn.tokiame.cn/2020-04-26-19-32-24.png)
 稍等片刻会出现升级结果。升级成功后，要求重新启动，这时输入reboot命令，将该节点重启即可。
 
 ## 后续操作
 重启完成后，再次用vSphere Client登录到ESXi，看看ESXi的版本是不是升级到5.5了？
-![2020-04-26-19-40-10](https://buff.tokiame.cn/hexo-images/2020-04-26-19-40-10.png)
+![2020-04-26-19-40-10](https://cdn.tokiame.cn/2020-04-26-19-40-10.png)
 
 确认升级成功后，将ESXi节点退出维护模式：
-![2020-04-26-19-44-17](https://buff.tokiame.cn/hexo-images/2020-04-26-19-44-17.png)
+![2020-04-26-19-44-17](https://cdn.tokiame.cn/2020-04-26-19-44-17.png)
 
 # 后记
 以上就是ESXi的平滑升级流程。当然，在生产环境下，系统升级前必须拟定相应的方案（例如升级流程、应急预案等），并对原系统进行测试、数据备份，升级过程中必须严格遵循操作规程，升级后还需要保留一定时长的观察期，当这一系列流程都顺利完成后，才能正式交付使用。

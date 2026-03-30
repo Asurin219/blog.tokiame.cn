@@ -160,7 +160,7 @@ public class Employee {
 4. 将修改后的``Employee``类移入test包内，并在文件开头声明所属的包名。
 
 修改后的目录结构如下：
-![2022-10-19-14-34-17](https://buff.tokiame.cn/hexo-images/2022-10-19-14-34-17.png)
+![2022-10-19-14-34-17](https://cdn.tokiame.cn/2022-10-19-14-34-17.png)
 
 * Employee类：
     ```java

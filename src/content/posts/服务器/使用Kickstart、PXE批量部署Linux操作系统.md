@@ -2,7 +2,7 @@
 title: '使用Kickstart+PXE批量部署Linux操作系统.md'
 published: 2020-07-06
 description: ''
-image: 'https://buff.tokiame.cn/hexo-images/2020-07-06-17-32-37.png'
+image: 'https://cdn.tokiame.cn/2020-07-06-17-32-37.png'
 tags:
   - 'Linux'
   - 'CentOS'
@@ -173,12 +173,12 @@ sed -i 's/enforcing/permissive/g' /etc/selinux/config
 
 # 客户机测试
 打开虚拟机电源。由于未安装操作系统，虚拟机将会自动从网络进行引导：
-![2020-07-06-15-47-57](https://buff.tokiame.cn/hexo-images/2020-07-06-15-47-57.png)
+![2020-07-06-15-47-57](https://cdn.tokiame.cn/2020-07-06-15-47-57.png)
 
-![2020-07-06-15-48-38](https://buff.tokiame.cn/hexo-images/2020-07-06-15-48-38.png)
+![2020-07-06-15-48-38](https://cdn.tokiame.cn/2020-07-06-15-48-38.png)
 
 当出现下图所示界面以后，说明无人值守安装的基本配置已经成功，此时像往常一样进行系统安装操作即可：
-![2020-07-06-16-03-02](https://buff.tokiame.cn/hexo-images/2020-07-06-16-03-02.png)
+![2020-07-06-16-03-02](https://cdn.tokiame.cn/2020-07-06-16-03-02.png)
 
 # 总结
 本文实现的无人值守安装只能算是半自动化部署方式，因为在安装过程中，还需要对安装的主机进行一些参数设置。在实际生产环境下，还需要根据服务器的硬件配置（例如磁盘容量等），来定制应答文件。总之，通过Kickstart+PXE批量部署操作系统，不仅能够将运维人员从重复性的工作中解放出来，还能极大地提升系统安装效率。
